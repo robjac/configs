@@ -48,7 +48,7 @@ source $ZSH/oh-my-zsh.sh
 eval "$(thefuck --alias)"
 
 # aliases
-vim="nvim -u ~/repos/neovim/init.vim"
+vim="nvim -u ~/repos/configs/neovim/init.vim"
 
 alias vim=$vim
 alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
@@ -66,7 +66,7 @@ alias dku='docker-compose up'
 alias dkd='docker-compose down'
 alias dkb='docker-compose build'
 alias dkr='docker-compose run' # followed by service name and options
-alias vimconfig="$vim ~/repos/neovim/init.vim"
+alias vimconfig="$vim ~/repos/configs/neovim/init.vim"
 alias devbox='ssh jwaller@67.207.93.255'
 
 # remove zcompdump

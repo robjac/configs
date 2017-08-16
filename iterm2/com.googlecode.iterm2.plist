@@ -1627,11 +1627,11 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>410 365 620 392 0 0 1440 878 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>417 131 918 512 0 0 1440 878 </string>
+	<string>417 131 796 473 0 0 1440 878 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>99 294 592 584 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>710 0 730 878 0 0 1440 878 </string>
+	<string>710 426 570 452 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>183 4 570 873 0 0 1440 877 </string>
 	<key>New Bookmarks</key>
@@ -2492,7 +2492,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/josh/repos/iterm2</string>
+	<string>/Users/josh/repos/configs/iterm2</string>
 	<key>Print In Black And White</key>
 	<true/>
 	<key>PromptOnQuit</key>

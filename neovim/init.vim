@@ -85,7 +85,7 @@ noremap <Leader>w :w<CR>
 noremap <Leader>q :q<CR>
 noremap <Leader>f :FZF<CR>
 noremap <Leader>r :Bu<CR>
-noremap <Leader><Leader> :e ~/repos/neovim/init.vim<CR>
+noremap <Leader><Leader> :e ~/repos/configs/neovim/init.vim<CR>
 noremap <Leader>g :Gstatus<CR>
 
 "" colors
