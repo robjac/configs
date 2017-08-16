@@ -90,6 +90,7 @@ alias dkb='docker-compose build'
 alias dkr='docker-compose run' # followed by service name and options
 alias vimconfig="$vim ~/repos/configs/neovim/init.vim"
 alias bashconfig="$vim ~/repos/configs/bash/.bash_profile"
+alias gitconfig="$vim ~/repos/configs/git/.gitconfig"
 alias devbox='ssh jwaller@67.207.93.255'
 
 # git aliases
