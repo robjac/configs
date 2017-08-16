@@ -1,0 +1,118 @@
+snippet def "method"
+def $1
+	$2
+end
+endsnippet
+
+snippet req "require"
+require '$1'
+endsnippet
+
+snippet class "class"
+class $1
+	attr_accessor :$5
+
+	def initialize($1)
+		@$2
+	end
+
+	def $3
+
+	end
+
+	private
+
+	$4
+end
+endsnippet
+
+snippet if "if"
+if $1
+	$2
+end
+endsnippet
+
+snippet ife "if else"
+if $1
+	$2
+else
+	$3
+end
+endsnippet
+
+snippet eif "elsif"
+elsif $1
+	$2
+endsnippet
+
+snippet join "join"
+$1.join('$2')
+endsnippet
+
+snippet eachdo "each do |?|"
+$1.each do |$2|
+	$2
+end
+endsnippet
+
+snippet unless "unless"
+unless $1
+	$2
+end
+endsnippet
+
+snippet case "case"
+case $1
+when $2
+	$3
+when $4
+	$5
+else
+	$6
+end
+endsnippet
+
+snippet map "map"
+$1 = $2.map { |$3| $4 }
+endsnippet
+
+snippet times "times"
+$1.times do
+	$2
+end
+endsnippet
+
+snippet hash "hash"
+$1 = {
+	$2: $3
+}
+endsnippet
+
+snippet ins "inspect"
+$1.inspect
+endsnippet
+
+snippet new "class.new(args)"
+$1 = $2.new($3)
+endsnippet
+
+snippet mod "module"
+module $1
+	def $2
+		$3	
+	end
+end
+endsnippet
+
+# rails methods
+snippet respond "respond_to"
+respond_to do |format|
+	if @$1.save
+		format.html { redirect_to @$1, notice: "$1 was successfully created." }
+		format.json { render :show, status: :created, location: @$1 }
+	else
+		format.html { render :new }
+		format.json { render json: @$1.errors, status: :unprocessable_entity }
+	end
+end
+endsnippet

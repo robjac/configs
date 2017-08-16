@@ -1,0 +1,72 @@
+# If you come from bash you might have to change your $PATH.
+export PATH=$HOME/bin:/usr/bin:/usr/sbin:$PATH
+
+#zsh-users/zsh-autosuggestions - git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+# plugins=(zsh-autosuggestions)
+
+#zsh-users/zsh-syntax-highlighting - git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+# plugins=( [plugins...] zsh-syntax-highlighting)
+
+#zsh-users/zsh-completions - git clone https://github.com/zsh-users/zsh-completions ~/.oh-my-zsh/custom/plugins/zsh-completions
+# plugins=(… zsh-completions)
+# autoload -U compinit && compinit
+
+ZSH_THEME="agnoster"
+
+plugins=(
+	colorize
+	common-aliases
+	command-not-found
+	git
+	golang
+	nvm
+	npm
+	ruby
+	rvm
+	osx
+	rake
+	node
+	vasyharan/zsh-brew-services
+	yarn
+	z
+	zsh-autosuggestions
+	zsh-completions
+	zsh-syntax-highlighting
+)
+autoload -U compinit && compinit
+
+# Path to your oh-my-zsh installation.
+export ZSH=$HOME/.oh-my-zsh
+source $ZSH/oh-my-zsh.sh
+
+# thefuck...
+eval "$(thefuck --alias)"
+
+# aliases
+alias zshconfig='nvim ~/configs/zsh/.zshrc-linux'
+alias ohmyzsh='nvim ~/.oh-my-zsh'
+alias c='clear'
+alias e='emacs -nw'
+alias js='bundle exec jekyll s -w'
+alias jls='bundle exec jekyll liveserve'
+alias jb='bundle exec jekyll b --verbose'
+alias hs='hugo server'
+alias hn='hugo new'
+alias vim='nvim'
+alias vimconfig='nvim ~/configs/neovim/init.vim'
+
+# remove zcompdump
+rm -rf ~/.zcompdump*
+
+# exports
+[[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:/Library/Haskell/bin
+export PATH=/usr/opt/ncurses/bin:$PATH
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
