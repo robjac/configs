@@ -5,11 +5,18 @@ export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/Library/Haskell/bin
 export PATH=$HOME/.yarn/bin:$PATH
 export PATH=/usr/local/opt/ncurses/bin:$PATH
+export PATH="/usr/local/heroku/bin:$PATH"
 source /usr/local/bin/virtualenvwrapper.sh
 
 source ~/.profile
 
+# fzf search awesomeness
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# auto node version switcher - FTW
 [[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
+
+# set nvm as node manager
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

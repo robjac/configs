@@ -89,8 +89,8 @@ noremap <Leader><Leader> :e ~/repos/configs/neovim/init.vim<CR>
 noremap <Leader>g :Gstatus<CR>
 
 "" colors
-" colorscheme nova
-colorscheme flatcolor
+colorscheme nova
+" colorscheme flatcolor
 " colorscheme dracula
 
 "" defaults
@@ -111,7 +111,12 @@ set cc+=80
 highlight ColorColumn guibg=#222222
 
 """ escape
-inoremap ;; <Esc>
+inoremap wj <Esc>
+
+""" Terminal
+" noremap <Leader>t :split | terminal
+:au BufEnter * if &buftype == 'terminal' | :startinsert | endif
+tnoremap <Esc> <C-\><C-n>
 
 """ window settings
 nnoremap <Tab> <c-w>w
@@ -190,3 +195,4 @@ let g:NERDTreeIndicatorMapCustom = {
       \ 'Ignored'   : '☒',
       \ "Unknown"   : "?"
       \ }
+
