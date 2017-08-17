@@ -84,7 +84,7 @@ let mapleader = "\<Space>"
 noremap <Leader>w :w<CR>
 noremap <Leader>q :q<CR>
 noremap <Leader>f :FZF<CR>
-noremap <Leader>r :Bu<CR>
+noremap <Leader>r :Buffers<CR>
 noremap <Leader><Leader> :e ~/repos/configs/neovim/init.vim<CR>
 noremap <Leader>g :Gstatus<CR>
 
@@ -114,7 +114,6 @@ highlight ColorColumn guibg=#222222
 inoremap wj <Esc>
 
 """ Terminal
-" noremap <Leader>t :split | terminal
 :au BufEnter * if &buftype == 'terminal' | :startinsert | endif
 tnoremap <Esc> <C-\><C-n>
 
