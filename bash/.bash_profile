@@ -6,6 +6,7 @@ export PATH=$PATH:/Library/Haskell/bin
 export PATH=$HOME/.yarn/bin:$PATH
 export PATH=/usr/local/opt/ncurses/bin:$PATH
 export PATH="/usr/local/heroku/bin:$PATH"
+export VMAIL_HTML_PART_READER='elinks -dump'
 source /usr/local/bin/virtualenvwrapper.sh
 
 source ~/.profile
@@ -71,6 +72,7 @@ export SCM_CHECK=true
 
 eval "$(thefuck --alias)"
 eval "$(rbenv init -)"
+eval "$(docker-machine env default)"
 
 vim="nvim -u ~/repos/configs/neovim/init.vim"
 

@@ -113,6 +113,10 @@ highlight ColorColumn guibg=#222222
 """ escape
 inoremap wj <Esc>
 
+""" move current line up 1 or down 1
+nnoremap ˚ :m .-2<CR>==
+nnoremap ∆ :m .+1<CR>==
+
 """ Terminal
 :au BufEnter * if &buftype == 'terminal' | :startinsert | endif
 tnoremap <Esc> <C-\><C-n>

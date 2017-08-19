@@ -43,6 +43,11 @@ ln -s ~/repos/configs/neovim/init.vim ~/.config/nvim/init.vim
 cp -rf ~/repos/configs/neovim/dein/ ~/.config/nvim/dein
 cp -rf ~/repos/configs/neovim/UltiSnips/ ~/.config/neovim/UltiSnips
 
+echo "Setting up vmail"
+gem install vmail
+gem install elinks lynx
+ln -s ~/repos/configs/vmail/.vmailrc ~/.vmailrc/default/.vmailrc
+
 reload
 
 echo "The end..."
