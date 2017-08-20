@@ -42,6 +42,11 @@ if dein#load_state("~/.config/nvim/dein")
   call dein#add('rhysd/devdocs.vim')
   call dein#add('scrooloose/nerdtree')
   call dein#add('gabrielelana/vim-markdown')
+  call dein#add('Shougo/unite.vim')
+  call dein#add('Yggdroot/indentLine')
+  call dein#add('vim-airline/vim-airline')
+  call dein#add('justinmk/vim-sneak')
+  call dein#add('vim-ruby/vim-ruby')
 
   " Addon Template Engines and Frameworks
   call dein#add('therobut/vim-amber')
@@ -51,6 +56,7 @@ if dein#load_state("~/.config/nvim/dein")
   call dein#add('tpope/vim-rails')
   call dein#add('tpope/vim-liquid')
   call dein#add('mxw/vim-jsx')
+  call dein#add('vim-airline/vim-airline-themes')
 
   " Addon Themes
   call dein#add('jonathanfilip/vim-lucius')
@@ -105,8 +111,14 @@ set autoindent
 set smartindent
 set noswapfile
 set nowrap
+set conceallevel=1
+set hlsearch
+set noerrorbells
 set history=10000
 set colorcolumn=80
+set undolevels=500
+set mouse=r
+let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 set cc+=80
 highlight ColorColumn guibg=#222222
 
@@ -124,6 +136,18 @@ tnoremap <Esc> <C-\><C-n>
 """ window settings
 nnoremap <Tab> <c-w>w
 nnoremap <bs> <c-w>W
+
+""" resize panes with arrow keys
+nnoremap <Left> :vertical resize -1<CR>
+nnoremap <Right> :vertical resize +1<CR>
+nnoremap <Up> :resize -1<CR>
+nnoremap <Down> :resize +1<CR>
+
+" Disable arrow keys completely in Insert Mode
+imap <up> <nop>
+imap <down> <nop>
+imap <left> <nop>
+imap <right> <nop>
 
 """ tab between 2 most recent buffers
 nnoremap <Leader><Tab> :b#<CR>
@@ -199,3 +223,20 @@ let g:NERDTreeIndicatorMapCustom = {
       \ "Unknown"   : "?"
       \ }
 
+""" indentline
+let g:indentLine_enabled = 1
+let g:indentLine_char = "|"
+
+""" vimairline
+let g:airline#extensions#tabline#enabled=1
+let g:airline_powerline_fonts=1
+set laststatus=2
+
+""" vim-sneak
+let g:sneak#s_next = 1
+nmap f <Plug>Sneak_f
+nmap F <Plug>Sneak_F
+xmap f <Plug>Sneak_f
+xmap F <Plug>Sneak_F
+omap f <Plug>Sneak_f
+omap F <Plug>Sneak_F

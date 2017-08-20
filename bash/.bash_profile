@@ -94,6 +94,7 @@ alias vimconfig="$vim ~/repos/configs/neovim/init.vim"
 alias bashconfig="$vim ~/repos/configs/bash/.bash_profile"
 alias gitconfig="$vim ~/repos/configs/git/.gitconfig"
 alias devbox='ssh jwaller@67.207.93.255'
+alias ezol='ssh serverpilot@138.197.100.204'
 
 # git aliases
 alias gst='git status'
