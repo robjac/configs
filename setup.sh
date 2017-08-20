@@ -22,7 +22,7 @@ cp ~/repos/configs/bash/.bashrc ~/.bashrc
 
 echo "Installing dev packages"
 brew install rbenv python python3 neovim yarn git nvm
-brew cask install iterm2 google-chrome
+brew cask install iterm2 google-chrome sourcetree
 
 echo "Adding git config"
 cp ~/repos/configs/git/.gitconfig ~/.gitconfig
@@ -42,11 +42,6 @@ gem install neovim
 ln -s ~/repos/configs/neovim/init.vim ~/.config/nvim/init.vim
 cp -rf ~/repos/configs/neovim/dein/ ~/.config/nvim/dein
 cp -rf ~/repos/configs/neovim/UltiSnips/ ~/.config/neovim/UltiSnips
-
-echo "Setting up vmail"
-gem install vmail
-gem install elinks lynx
-ln -s ~/repos/configs/vmail/.vmailrc ~/.vmailrc/default/.vmailrc
 
 reload
 
