@@ -3,18 +3,21 @@ if &compatible
 endif
 
 " Required:
-set rtp+=~/.config/nvim/dein/github.com/Shougo/dein.vim
+set rtp+=/Users/joshwaller/.config/nvim/dein/repos/github.com/Shougo/dein.vim
 set rtp+=/usr/local/opt/fzf
+
+
+" Required:
 
 " START DEIN
 " Required:
-if dein#load_state("~/.config/nvim/dein")
-  call dein#begin(expand("~/.config/nvim/dein"))
+if dein#load_state('/Users/joshwaller/.config/nvim/dein')
+  call dein#begin('/Users/joshwaller/.config/nvim/dein')
   let g:python3_host_prog = '/usr/local/bin/python3'
 
   " Let dein manage dein
   " Required:
-  call dein#add('Shougo/dein.vim')
+  call dein#add('/Users/joshwaller/.config/nvim/dein/repos/github.com/Shougo/dein.vim')
   call dein#add('haya14busa/dein-command.vim')
 
   " Addon
@@ -178,6 +181,7 @@ let g:ale_fixers = {
 \		'javascript': ['eslint'],
 \}
 let g:ale_sign_column_always = 1
+let g:ale_fix_on_save = 1
 
 "" NERDCommenter
 let g:NERDSpaceDelims = 1
