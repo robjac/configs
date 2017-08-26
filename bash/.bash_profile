@@ -74,7 +74,7 @@ eval "$(thefuck --alias)"
 eval "$(rbenv init -)"
 eval "$(docker-machine env default)"
 
-vim="nvim -u ~/repos/configs/neovim/init.vim"
+vim="nvim"
 
 alias vim=$vim
 alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
@@ -86,11 +86,12 @@ alias ber='bundle exec rails'
 alias bem='bundle exec middleman'
 alias hs='hugo server -w'
 alias hn='hugo new'
+alias epi='elm package install'
 alias dku='docker-compose up'
 alias dkd='docker-compose down'
 alias dkb='docker-compose build'
 alias dkr='docker-compose run' # followed by service name and options
-alias vimconfig="$vim ~/repos/configs/neovim/init.vim"
+alias vimconfig="$vim ~/.config/nvim/init.vim"
 alias bashconfig="$vim ~/repos/configs/bash/.bash_profile"
 alias gitconfig="$vim ~/repos/configs/git/.gitconfig"
 alias devbox='ssh jwaller@67.207.93.255'
