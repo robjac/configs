@@ -9,19 +9,21 @@ if [ "$answer" != "y" ]; then
 fi
 
 echo "Installing brew"
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+# /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 echo "Installing Bash-it"
-git clone --depth=1 https://github.com/Bash-it/bash-it.git ~/.bash_it
+# git clone --depth=1 https://github.com/Bash-it/bash-it.git ~/.bash_it
 ~/.bash_it/install.sh
 
 echo "Syncing .bash_profile"
 rm ~/.bash_profile
+rm ~/.bashrc
 ln -s ~/repos/configs/bash/.bash_profile ~/.bash_profile
 cp ~/repos/configs/bash/.bashrc ~/.bashrc
 
 echo "Installing dev packages"
-brew install rbenv python python3 neovim yarn git nvm
+brew install rbenv python python3 neovim yarn nvm
+reload
 brew cask install iterm2 google-chrome sourcetree
 
 echo "Adding git config"
@@ -37,11 +39,12 @@ rbenv init
 rbenv install -l
 
 echo "Setting up neovim"
-pip install neovim
+pip3 install neovim
 gem install neovim
+mkdir -p ~/.config/nvim
 ln -s ~/repos/configs/neovim/init.vim ~/.config/nvim/init.vim
 cp -rf ~/repos/configs/neovim/dein/ ~/.config/nvim/dein
-cp -rf ~/repos/configs/neovim/UltiSnips/ ~/.config/neovim/UltiSnips
+cp -rf ~/repos/configs/neovim/UltiSnips/ ~/.config/nvim/UltiSnips
 
 reload
 
