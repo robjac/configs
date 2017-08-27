@@ -3,88 +3,74 @@ if &compatible
 endif
 
 " Required:
-set rtp+=/Users/joshwaller/.config/nvim/dein/repos/github.com/Shougo/dein.vim
 set rtp+=/usr/local/opt/fzf
 
 
 " Required:
 
-" START DEIN
+" START Vim-Plug
 " Required:
-if dein#load_state('/Users/joshwaller/.config/nvim/dein')
-  call dein#begin('/Users/joshwaller/.config/nvim/dein')
-  let g:python3_host_prog = '/usr/local/bin/python3'
+call plug#begin('~/.local/share/nvim/plugged')
 
-  " Let dein manage dein
-  " Required:
-  call dein#add('/Users/joshwaller/.config/nvim/dein/repos/github.com/Shougo/dein.vim')
-  call dein#add('haya14busa/dein-command.vim')
-
-  " Addon
-  call dein#add('Shougo/deoplete.nvim')
-  call dein#add('ervandew/supertab')
-  call dein#add('junegunn/fzf.vim')
-  call dein#add('ConradIrwin/vim-bracketed-paste')
-  call dein#add('airblade/vim-gitgutter')
-  call dein#add('w0rp/ale')
-  call dein#add('pangloss/vim-javascript')
-  call dein#add('isRuslan/vim-es6')
-  call dein#add('othree/html5.vim')
-  call dein#add('hail2u/vim-css3-syntax')
-  call dein#add('tmhedberg/matchit')
-  call dein#add('tpope/vim-bundler')
-  call dein#add('tpope/vim-vinegar')
-  call dein#add('tpope/vim-surround')
-  call dein#add('tpope/vim-fugitive')
-  call dein#add('scrooloose/nerdcommenter')
-  call dein#add('majutsushi/tagbar')
-  call dein#add('mattn/emmet-vim')
-  call dein#add('jiangmiao/auto-pairs')
-  call dein#add('SirVer/ultisnips')
-  call dein#add('cespare/vim-toml')
-  call dein#add('rhysd/devdocs.vim')
-  call dein#add('scrooloose/nerdtree')
-  call dein#add('gabrielelana/vim-markdown')
-  call dein#add('Shougo/unite.vim')
-  call dein#add('Yggdroot/indentLine')
-  call dein#add('vim-airline/vim-airline')
-  call dein#add('justinmk/vim-sneak')
-  call dein#add('vim-ruby/vim-ruby')
+  " Plugins
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'ervandew/supertab'
+  Plug 'junegunn/fzf.vim'
+  Plug 'ConradIrwin/vim-bracketed-paste'
+  Plug 'airblade/vim-gitgutter'
+  Plug 'w0rp/ale'
+  Plug 'pangloss/vim-javascript'
+  Plug 'isRuslan/vim-es6'
+  Plug 'othree/html5.vim'
+  Plug 'hail2u/vim-css3-syntax'
+  Plug 'tmhedberg/matchit'
+  Plug 'tpope/vim-bundler'
+  Plug 'tpope/vim-vinegar'
+  Plug 'tpope/vim-surround'
+  Plug 'tpope/vim-fugitive'
+  Plug 'scrooloose/nerdcommenter'
+  Plug 'majutsushi/tagbar'
+  Plug 'mattn/emmet-vim'
+  Plug 'jiangmiao/auto-pairs'
+  Plug 'SirVer/ultisnips'
+  Plug 'cespare/vim-toml'
+  Plug 'rhysd/devdocs.vim'
+  Plug 'scrooloose/nerdtree'
+  Plug 'gabrielelana/vim-markdown'
+  Plug 'Shougo/unite.vim'
+  Plug 'Yggdroot/indentLine'
+  Plug 'vim-airline/vim-airline'
+  Plug 'justinmk/vim-sneak'
+  Plug 'vim-ruby/vim-ruby'
 
   " Addon Template Engines and Frameworks
-  call dein#add('therobut/vim-amber')
-  call dein#add('Epitrochoid/marko-vim-syntax')
-  call dein#add('posva/vim-vue')
-  call dein#add('digitaltoad/vim-pug')
-  call dein#add('tpope/vim-rails')
-  call dein#add('tpope/vim-liquid')
-  call dein#add('mxw/vim-jsx')
-  call dein#add('vim-airline/vim-airline-themes')
+  Plug 'therobut/vim-amber'
+  Plug 'Epitrochoid/marko-vim-syntax'
+  Plug 'posva/vim-vue'
+  Plug 'digitaltoad/vim-pug'
+  Plug 'tpope/vim-rails'
+  Plug 'tpope/vim-liquid'
+  Plug 'mxw/vim-jsx'
+  Plug 'vim-airline/vim-airline-themes'
 
   " Addon Themes
-  call dein#add('jonathanfilip/vim-lucius')
-  call dein#add('trevordmiller/nova-vim')
-  call dein#add('MaxSt/FlatColor')
-  call dein#add('dracula/vim')
+  Plug 'jonathanfilip/vim-lucius'
+  Plug 'trevordmiller/nova-vim'
+  Plug 'MaxSt/FlatColor'
+  Plug 'dracula/vim'
 
   " You can specify revision/branch/tag.
-  call dein#add('Shougo/vimshell', { 'rev': '3787e5' }) 
+  Plug 'Shougo/vimshell', { 'rev': '3787e5' }
 
   " Required:
-  call dein#end()
-  call dein#save_state()
+  call plug#end()
 endif
+
+" end plugins
 
 " Required:
 filetype plugin indent on
 syntax on
-
-" If you want to install not installed plugins on startup.
-if dein#check_install()
-  call dein#install()
-endif
-
-" END DEIN
 
 " Configuration settings
 

@@ -1,3 +1,5 @@
+source ~/.zplug/init.zsh
+
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
     printf "Install? [y/N]: "
@@ -5,12 +7,6 @@ if ! zplug check --verbose; then
         echo; zplug install
     fi
 fi
-
-source ~/.zplug/init.zsh
-
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH
-export PATH="$HOME/.yarn/bin:$PATH"
 
 # User configuration
 . `brew --prefix`/etc/profile.d/z.sh
@@ -76,7 +72,7 @@ autoload -U compinit && compinit
 eval "$(thefuck --alias)"
 
 # aliases
-vim="nvim -u ~/repos/configs/neovim/init.vim"
+vim="nvim -u ~/repos/configs/nvim/init.vim"
 
 alias vim=$vim
 alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
@@ -101,12 +97,13 @@ alias devbox='ssh jwaller@67.207.93.255'
 rm -rf ~/.zcompdump*
 
 # exports
-[[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/Library/Haskell/bin
 export PATH=$HOME/.yarn/bin:$PATH
 export PATH=/usr/local/opt/ncurses/bin:$PATH
+export PATH=$HOME/.rbenv/bin:$PATH
+eval "$(rbenv init -)"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
