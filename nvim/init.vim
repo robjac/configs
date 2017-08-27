@@ -5,64 +5,60 @@ endif
 " Required:
 set rtp+=/usr/local/opt/fzf
 
-
 " Required:
 
 " START Vim-Plug
 " Required:
 call plug#begin('~/.local/share/nvim/plugged')
 
-  " Plugins
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'ervandew/supertab'
-  Plug 'junegunn/fzf.vim'
-  Plug 'ConradIrwin/vim-bracketed-paste'
-  Plug 'airblade/vim-gitgutter'
-  Plug 'w0rp/ale'
-  Plug 'pangloss/vim-javascript'
-  Plug 'isRuslan/vim-es6'
-  Plug 'othree/html5.vim'
-  Plug 'hail2u/vim-css3-syntax'
-  Plug 'tmhedberg/matchit'
-  Plug 'tpope/vim-bundler'
-  Plug 'tpope/vim-vinegar'
-  Plug 'tpope/vim-surround'
-  Plug 'tpope/vim-fugitive'
-  Plug 'scrooloose/nerdcommenter'
-  Plug 'majutsushi/tagbar'
-  Plug 'mattn/emmet-vim'
-  Plug 'jiangmiao/auto-pairs'
-  Plug 'SirVer/ultisnips'
-  Plug 'cespare/vim-toml'
-  Plug 'rhysd/devdocs.vim'
-  Plug 'scrooloose/nerdtree'
-  Plug 'gabrielelana/vim-markdown'
-  Plug 'Shougo/unite.vim'
-  Plug 'Yggdroot/indentLine'
-  Plug 'vim-airline/vim-airline'
-  Plug 'justinmk/vim-sneak'
-  Plug 'vim-ruby/vim-ruby'
+" Plugins
+Plug 'Shougo/deoplete.nvim'
+Plug 'ervandew/supertab'
+Plug 'junegunn/fzf.vim'
+Plug 'ConradIrwin/vim-bracketed-paste'
+Plug 'airblade/vim-gitgutter'
+Plug 'w0rp/ale'
+Plug 'pangloss/vim-javascript'
+Plug 'isRuslan/vim-es6'
+Plug 'othree/html5.vim'
+Plug 'hail2u/vim-css3-syntax'
+Plug 'tmhedberg/matchit'
+Plug 'tpope/vim-bundler'
+Plug 'tpope/vim-vinegar'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive'
+Plug 'scrooloose/nerdcommenter'
+Plug 'majutsushi/tagbar'
+Plug 'mattn/emmet-vim'
+Plug 'jiangmiao/auto-pairs'
+Plug 'SirVer/ultisnips'
+Plug 'cespare/vim-toml'
+Plug 'rhysd/devdocs.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'gabrielelana/vim-markdown'
+Plug 'Shougo/unite.vim'
+Plug 'Yggdroot/indentLine'
+Plug 'vim-airline/vim-airline'
+Plug 'justinmk/vim-sneak'
+Plug 'vim-ruby/vim-ruby'
 
-  " Addon Template Engines and Frameworks
-  Plug 'therobut/vim-amber'
-  Plug 'Epitrochoid/marko-vim-syntax'
-  Plug 'posva/vim-vue'
-  Plug 'digitaltoad/vim-pug'
-  Plug 'tpope/vim-rails'
-  Plug 'tpope/vim-liquid'
-  Plug 'mxw/vim-jsx'
-  Plug 'vim-airline/vim-airline-themes'
+" Addon Template Engines and Frameworks
+Plug 'therobut/vim-amber', { 'for': 'amber' }
+Plug 'Epitrochoid/marko-vim-syntax', { 'for': 'marko' }
+Plug 'posva/vim-vue'
+Plug 'digitaltoad/vim-pug', { 'for': 'pug' }
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-liquid'
+Plug 'mxw/vim-jsx'
+Plug 'vim-airline/vim-airline-themes'
 
-  " Addon Themes
-  Plug 'jonathanfilip/vim-lucius'
-  Plug 'trevordmiller/nova-vim'
-  Plug 'MaxSt/FlatColor'
-  Plug 'dracula/vim'
+" Addon Themes
+Plug 'jonathanfilip/vim-lucius'
+Plug 'trevordmiller/nova-vim'
+Plug 'MaxSt/FlatColor'
+Plug 'dracula/vim'
 
-  " You can specify revision/branch/tag.
-  Plug 'Shougo/vimshell', { 'rev': '3787e5' }
-
-  " Required:
+" Required:
 call plug#end()
 
 " end plugins
