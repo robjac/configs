@@ -1,3 +1,13 @@
+# Install plugins if there are plugins that have not been installed
+if ! zplug check --verbose; then
+    printf "Install? [y/N]: "
+    if read -q; then
+        echo; zplug install
+    fi
+fi
+
+source ~/.zplug/init.zsh
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH
 export PATH="$HOME/.yarn/bin:$PATH"
@@ -5,44 +15,62 @@ export PATH="$HOME/.yarn/bin:$PATH"
 # User configuration
 . `brew --prefix`/etc/profile.d/z.sh
 
-#zsh-users/zsh-autosuggestions - git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
-# plugins=(zsh-autosuggestions)
-
-#zsh-users/zsh-syntax-highlighting - git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-# plugins=( [plugins...] zsh-syntax-highlighting)
-
-#zsh-users/zsh-completions - git clone https://github.com/zsh-users/zsh-completions ~/.oh-my-zsh/custom/plugins/zsh-completions
-# plugins=(… zsh-completions)
-# autoload -U compinit && compinit
-
-ZSH_THEME="lambda"
-# ZSH_THEME="dracula"
-
-plugins=(
-	colorize
-	common-aliases
-	command-not-found
-	git
-	golang
-	nvm
-	npm
-	ruby
-	rvm
-	osx
-	rake
-	node
-	vasyharan/zsh-brew-services
-	yarn
-	z
-	zsh-autosuggestions
-	zsh-completions
-	zsh-syntax-highlighting
-)
 autoload -U compinit && compinit
 
-# Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
-source $ZSH/oh-my-zsh.sh
+# ZSH_THEME="dracula"
+
+### PLUGINS
+
+# lambda theme
+zplug "halfo/lambda-mod-zsh-theme", as:theme, from:github, defer:2
+
+# Make sure to use double quotes
+zplug "zsh-users/zsh-history-substring-search"
+
+# Syntax highlighting
+zplug "zsh-users/zsh-syntax-highlighting", defer:2
+
+# auto completions
+zplug "zsh-users/zsh-completions"
+
+# async
+zplug "mafredri/zsh-async"
+
+# history
+zplug "lib/history", from:oh-my-zsh
+
+# Auto ls when cd'ing directory
+zplug "desyncr/auto-ls"
+
+# Rake task completion
+zplug "unixorn/rake-completion.zshplugin"
+
+# cabal completion
+zplug "d12frosted/cabal.plugin.zsh"
+
+# vim mode
+zplug "sharat87/zsh-vim-mode"
+
+# autopair
+zplug "hlissner/zsh-autopair"
+
+# auto nvm use
+zplug "tomsquest/nvm-auto-use.zsh"
+
+# iterm tab colors
+zplug "tysonwolker/iterm-tab-colors"
+
+# fast syntax highlighting
+zplug "zdharma/fast-syntax-highlighting"
+
+# caniuse
+zplug "walesmd/caniuse.plugin.zsh"
+
+zplug "plugins/brew", from:oh-my-zsh, defer:2
+zplug "plugins/brew-cask", from:oh-my-zsh, defer:2
+zplug "plugins/git",   from:oh-my-zsh, defer:2
+
+ZSH_THEME="lambda"
 
 # thefuck...
 eval "$(thefuck --alias)"
@@ -52,7 +80,7 @@ vim="nvim -u ~/repos/configs/neovim/init.vim"
 
 alias vim=$vim
 alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
-alias zshconfig="$vim ~/repos/zsh/.zshrc"
+alias zshconfig="$vim ~/repos/configs/zsh/.zshrc"
 alias ohmyzsh="$vim ~/.oh-my-zsh"
 alias c='clear'
 alias e='emacs -nw'
@@ -83,3 +111,6 @@ export PATH=/usr/local/opt/ncurses/bin:$PATH
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Source zplug
+zplug load
