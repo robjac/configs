@@ -63,8 +63,7 @@ call plug#begin('~/.local/share/nvim/plugged')
   Plug 'Shougo/vimshell', { 'rev': '3787e5' }
 
   " Required:
-  call plug#end()
-endif
+call plug#end()
 
 " end plugins
 

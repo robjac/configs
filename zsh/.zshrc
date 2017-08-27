@@ -2,10 +2,10 @@ source ~/.zplug/init.zsh
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
-    printf "Install? [y/N]: "
-    if read -q; then
-        echo; zplug install
-    fi
+  printf "Install? [y/N]: "
+  if read -q; then
+    echo; zplug install
+  fi
 fi
 
 # User configuration
@@ -90,7 +90,7 @@ alias dku='docker-compose up'
 alias dkd='docker-compose down'
 alias dkb='docker-compose build'
 alias dkr='docker-compose run' # followed by service name and options
-alias vimconfig="$vim ~/repos/configs/neovim/init.vim"
+alias vimconfig="$vim ~/repos/configs/nvim/init.vim"
 alias devbox='ssh jwaller@67.207.93.255'
 
 # remove zcompdump
