@@ -15,8 +15,6 @@ export PATH="$HOME/.yarn/bin:$PATH"
 # User configuration
 . `brew --prefix`/etc/profile.d/z.sh
 
-autoload -U compinit && compinit
-
 # ZSH_THEME="dracula"
 
 ### PLUGINS
@@ -71,6 +69,8 @@ zplug "plugins/brew-cask", from:oh-my-zsh, defer:2
 zplug "plugins/git",   from:oh-my-zsh, defer:2
 
 ZSH_THEME="lambda"
+
+autoload -U compinit && compinit
 
 # thefuck...
 eval "$(thefuck --alias)"
