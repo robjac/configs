@@ -1,3 +1,7 @@
+" vim-plug install:
+" curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+"    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
 if &compatible
   set nocompatible
 endif
@@ -75,7 +79,7 @@ noremap <Leader>w :w<CR>
 noremap <Leader>q :q<CR>
 noremap <Leader>f :FZF<CR>
 noremap <Leader>r :Buffers<CR>
-noremap <Leader><Leader> :e ~/repos/configs/neovim/init.vim<CR>
+noremap <Leader><Leader> :e ~/repos/configs/nvim/init.vim<CR>
 noremap <Leader>g :Gstatus<CR>
 
 "" colors

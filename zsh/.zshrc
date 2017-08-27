@@ -1,3 +1,6 @@
+# zplug install:
+# curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh| zsh
+
 source ~/.zplug/init.zsh
 
 # Install plugins if there are plugins that have not been installed
