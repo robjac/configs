@@ -16,47 +16,69 @@ set rtp+=/usr/local/opt/fzf
 call plug#begin('~/.local/share/nvim/plugged')
 
 " Plugins
+"" autocompletion
 Plug 'Shougo/deoplete.nvim'
 Plug 'ervandew/supertab'
+
+"" search
 Plug 'junegunn/fzf.vim'
+
+"" editor enhancements
 Plug 'ConradIrwin/vim-bracketed-paste'
-Plug 'airblade/vim-gitgutter'
-Plug 'w0rp/ale'
-Plug 'pangloss/vim-javascript'
-Plug 'isRuslan/vim-es6'
-Plug 'othree/html5.vim'
-Plug 'hail2u/vim-css3-syntax'
 Plug 'tmhedberg/matchit'
-Plug 'tpope/vim-bundler'
-Plug 'tpope/vim-vinegar'
 Plug 'tpope/vim-surround'
-Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdcommenter'
 Plug 'majutsushi/tagbar'
 Plug 'mattn/emmet-vim'
 Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-vinegar'
 Plug 'SirVer/ultisnips'
-Plug 'cespare/vim-toml'
-Plug 'rhysd/devdocs.vim'
 Plug 'scrooloose/nerdtree'
-Plug 'gabrielelana/vim-markdown'
 Plug 'Shougo/unite.vim'
 Plug 'Yggdroot/indentLine'
-Plug 'vim-airline/vim-airline'
 Plug 'justinmk/vim-sneak'
-Plug 'vim-ruby/vim-ruby'
+Plug 'vim-airline/vim-airline'
 
-" Addon Template Engines and Frameworks
-Plug 'therobut/vim-amber', { 'for': 'amber' }
+"" git
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
+
+"" html/css/js
+Plug 'pangloss/vim-javascript'
+Plug 'isRuslan/vim-es6'
+Plug 'othree/html5.vim'
+Plug 'hail2u/vim-css3-syntax'
+
+"" frontend template engines/frameworks
+Plug 'digitaltoad/vim-pug', { 'for': 'pug' }
 Plug 'Epitrochoid/marko-vim-syntax', { 'for': 'marko' }
 Plug 'posva/vim-vue'
-Plug 'digitaltoad/vim-pug', { 'for': 'pug' }
-Plug 'tpope/vim-rails'
 Plug 'tpope/vim-liquid'
 Plug 'mxw/vim-jsx'
-Plug 'vim-airline/vim-airline-themes'
 
-" Addon Themes
+"" backend frameworks
+Plug 'tpope/vim-rails'
+
+"" markdown/yaml/toml
+Plug 'cespare/vim-toml'
+Plug 'gabrielelana/vim-markdown'
+
+"" ruby/elixir
+Plug 'tpope/vim-bundler'
+Plug 'vim-ruby/vim-ruby'
+Plug 'elixir-editors/vim-elixir'
+
+"" go
+Plug 'therobut/vim-amber', { 'for': 'amber' }
+
+"" syntax/error checking
+Plug 'w0rp/ale'
+
+"" documentation
+Plug 'rhysd/devdocs.vim'
+
+"" themes
+Plug 'vim-airline/vim-airline-themes'
 Plug 'jonathanfilip/vim-lucius'
 Plug 'trevordmiller/nova-vim'
 Plug 'MaxSt/FlatColor'

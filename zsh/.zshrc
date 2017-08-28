@@ -95,6 +95,7 @@ alias dkb='docker-compose build'
 alias dkr='docker-compose run' # followed by service name and options
 alias vimconfig="$vim ~/repos/configs/nvim/init.vim"
 alias devbox='ssh jwaller@67.207.93.255'
+alias sync_configs="cd ~/repos/configs && git add .; git commit -m 'updates'; git pull origin master; git push origin master;"
 
 # remove zcompdump
 rm -rf ~/.zcompdump*
