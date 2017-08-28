@@ -96,6 +96,7 @@ alias dkr='docker-compose run' # followed by service name and options
 alias vimconfig="$vim ~/repos/configs/nvim/init.vim"
 alias devbox='ssh jwaller@67.207.93.255'
 alias sync_configs="cd ~/repos/configs && git add .; git commit -m 'updates'; git pull origin master; git push origin master;"
+alias reload='source ~/repos/configs/zsh/.zshrc'
 
 # remove zcompdump
 rm -rf ~/.zcompdump*
@@ -107,6 +108,8 @@ export PATH=$PATH:/Library/Haskell/bin
 export PATH=$HOME/.yarn/bin:$PATH
 export PATH=/usr/local/opt/ncurses/bin:$PATH
 export PATH=$HOME/.rbenv/bin:$PATH
+export NVM_DIR="$HOME/.nvm"
+. "/usr/local/opt/nvm/nvm.sh"
 eval "$(rbenv init -)"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
