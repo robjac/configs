@@ -78,6 +78,7 @@ Plug 'w0rp/ale'
 Plug 'rhysd/devdocs.vim'
 
 "" themes
+Plug 'altercation/vim-colors-solarized'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'jonathanfilip/vim-lucius'
 Plug 'trevordmiller/nova-vim'
@@ -90,8 +91,8 @@ call plug#end()
 " end plugins
 
 " Required:
-filetype plugin indent on
-syntax on
+" filetype plugin indent on
+" syntax on
 
 " Configuration settings
 
@@ -105,11 +106,13 @@ noremap <Leader><Leader> :e ~/repos/configs/nvim/init.vim<CR>
 noremap <Leader>g :Gstatus<CR>
 
 "" colors
-colorscheme nova
+set background=dark
+colorscheme solarized
 " colorscheme flatcolor
 " colorscheme dracula
 
 "" defaults
+set encoding=utf-8
 set number
 set cursorline
 set backspace=indent,eol,start
@@ -239,8 +242,10 @@ let g:indentLine_enabled = 1
 let g:indentLine_char = "|"
 
 """ vimairline
+let g:airline_solarized_bg='dark'
 let g:airline#extensions#tabline#enabled=1
 let g:airline_powerline_fonts=1
+let g:airline_theme='solarized'
 set laststatus=2
 
 """ vim-sneak
