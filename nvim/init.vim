@@ -210,7 +210,7 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-n>"
 let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 let g:UltiSnipsEditSplit="horizontal"
-let g:UltiSnipsSnippetsDir=$HOME . '/.config/nvim/UltiSnips'
+let g:UltiSnipsSnippetsDir=$HOME . '~/repos/configs/nvim/UltiSnips'
 let g:UltiSnipsEnableSnipMate = 0
 
 " au FileType javascript :UltiSnipsAddFiletypes javascript

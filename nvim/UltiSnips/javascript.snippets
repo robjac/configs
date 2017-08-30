@@ -1,0 +1,242 @@
+###########
+# GENERAL #
+###########
+
+snippet if "if" i
+if ($1) {
+	$2
+}
+endsnippet
+
+snippet ife "if else" i
+if ($1) {
+	$2
+} else {
+	$3
+}
+endsnippet
+
+snippet fn "function <name>(){}" i
+function $1($2) {
+	$3
+}
+endsnippet
+
+snippet nfn "name() {}" i
+$1($2) {
+	$3
+}
+endsnippet
+
+snippet aifn "const <name> = () => {}" i
+const $1 = ($2) => $3
+endsnippet
+
+snippet afn "const <name> = () => { \n }" i
+const $1 = ($2) => {
+	$3
+}
+endsnippet
+
+snippet const "const <name> = foo" i
+const $1 = $2
+endsnippet
+
+snippet dqs "document.querySelector" i
+document.querySelector('$1')
+endsnippet
+
+snippet dqsa "document.querySelectorAll" i
+document.querySelectorAll('$1')
+endsnippet
+
+snippet dgid "document.getElementById" i
+document.getElementById('$1')
+endsnippet
+
+snippet clg "console log" i
+console.log($1)
+endsnippet
+
+snippet cle "console error" i
+console.error($1)
+endsnippet
+
+snippet map "map" i
+$1.map(($2) => {
+	$3
+})
+endsnippet
+
+snippet mapi "map inline" i
+$1.map($2 => $3)
+endsnippet
+
+snippet filter "filter" i
+$1.filter(($2) => {
+	return $3
+})
+endsnippet
+
+snippet filteri "filter inline" i
+$1.filter($2 => $3)
+endsnippet
+
+############
+# PROMISES #
+############
+
+snippet then "then" i
+then(($1) => {
+	$2
+})
+endsnippet
+
+snippet then( "then" i
+then(($1) => {
+	$2
+})
+endsnippet
+
+snippet then(f "then" i
+then(($1) => {
+	$2
+})
+endsnippet
+
+snippet catch "catch" i
+catch((err) => {
+	$1
+})
+endsnippet
+
+#########
+# REACT #
+#########
+
+snippet rpta
+$1: React.PropTypes.array,
+endsnippet
+
+snippet rptb
+$1: React.PropTypes.bool,
+endsnippet
+
+snippet rptf
+$1: React.PropTypes.func,
+endsnippet
+
+snippet rptn
+$1: React.PropTypes.number,
+endsnippet
+
+snippet rpto
+$1: React.PropTypes.object,
+endsnippet
+
+snippet rpts
+$1: React.PropTypes.string,
+endsnippet
+
+snippet con "react constructor" i
+constructor(props) {
+	super(props);
+
+	this.state = {
+		$1: $2
+	};
+} 
+endsnippet
+
+snippet render "react render" i
+render() {
+	const $1 = $2;
+
+	return (
+		<div>
+			$3	
+		</div>
+	);
+}
+endsnippet
+
+snippet rc
+import React from 'react'
+
+export default class $1 extends React.Component {
+	static propTypes = {
+	}
+	
+	render() {
+		return (
+			<div>$1</div>
+		)
+	}
+}
+endsnippet
+
+snippet rcwm "componentWillMount"
+componentWillMount() {
+	$1
+}
+endsnippet
+
+snippet rcredux
+import React from 'react'
+import { connect } from 'react-redux'
+
+class $1 extends React.Component {
+	static propTypes = {
+	}
+
+	render() {
+		return (
+			<div>$1</div>
+		)
+	}
+}
+
+$1.propTypes = {
+	$2: $3
+};
+
+const mapStateToProps = state => ({
+	$4: $5
+})
+
+const mapDispatchToProps = {
+	$6: $7
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)($1)
+endsnippet
+
+###########
+# IMPORTS #
+###########
+
+snippet imp
+import $1 from '$2'
+endsnippet
+
+snippet req
+const $1 = require('$2')
+endsnippet
+
+################
+# node/express #
+################
+
+snippet exp "require express" i
+const express = require('express')
+const app = express()
+endsnippet
+
+snippet euse "express use" i
+app.use($1)
+endsnippet
+
+snippet modex "module.exports" i
+module.exports = $1
+endsnippet
+

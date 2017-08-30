@@ -14,7 +14,7 @@
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [core]
-	editor = nvim -u ~/repos/configs/neovim/init.vim
+	editor = nvim -u ~/repos/configs/nvim/init.vim
 	autocrlf = input
 	excludesfile = ~/.cvsignore
 [credential]
