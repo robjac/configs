@@ -92,7 +92,6 @@ Plug 'dracula/vim'
 
 " Required:
 call plug#end()
-
 " end plugins
 
 " Configuration settings
