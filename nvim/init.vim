@@ -109,14 +109,14 @@ noremap <Leader>g :Gstatus<CR>
 "" colors
 set background=dark
 set termguicolors
-colorscheme meta5
+colorscheme space-vim-dark
+" colorscheme meta5
 " colorscheme solarized
 " colorscheme flatcolor
 " colorscheme dracula
 " colorscheme vim-material
 " colorscheme deus
 " colorscheme spacemacs-theme
-" colorscheme space-vim-dark
 " colorscheme happey_hacking
 
 "" defaults
