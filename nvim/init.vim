@@ -80,7 +80,13 @@ Plug 'rhysd/devdocs.vim'
 Plug 'altercation/vim-colors-solarized'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'jonathanfilip/vim-lucius'
+Plug 'hzchirs/vim-material'
+Plug 'YorickPeterse/happy_hacking.vim'
+Plug 'ajmwagar/vim-deus'
+Plug 'colepeters/spacemacs-theme.vim'
+Plug 'liuchengxu/space-vim-dark'
 Plug 'trevordmiller/nova-vim'
+Plug 'christophermca/meta5'
 Plug 'MaxSt/FlatColor'
 Plug 'dracula/vim'
 
@@ -88,10 +94,6 @@ Plug 'dracula/vim'
 call plug#end()
 
 " end plugins
-
-" Required:
-" filetype plugin indent on
-" syntax on
 
 " Configuration settings
 
@@ -107,9 +109,16 @@ noremap <Leader>g :Gstatus<CR>
 
 "" colors
 set background=dark
-colorscheme solarized
+set termguicolors
+colorscheme meta5
+" colorscheme solarized
 " colorscheme flatcolor
 " colorscheme dracula
+" colorscheme vim-material
+" colorscheme deus
+" colorscheme spacemacs-theme
+" colorscheme space-vim-dark
+" colorscheme happey_hacking
 
 "" defaults
 set encoding=utf-8
