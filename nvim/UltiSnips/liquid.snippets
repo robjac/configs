@@ -1,0 +1,25 @@
+snippet for "for loop"
+{% for $1 in $2 %}
+	$3
+{% endfor %}
+endsnippet
+
+snippet if "if statement"
+{% if $1 %}
+	$2
+{% endif %}
+endsnippet
+
+snippet ass "assign var"
+{% assign $1 = $2 %}
+endsnippet
+
+snippet inc "include file"
+{% include $1 %}
+endsnippet
+
+snippet cap "capture"
+{% capture $1 %}
+	$2
+{% endcapture %}
+endsnippet

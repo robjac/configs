@@ -36,7 +36,6 @@ Plug 'SirVer/ultisnips'
 Plug 'scrooloose/nerdtree'
 Plug 'Shougo/unite.vim'
 Plug 'Yggdroot/indentLine'
-Plug 'justinmk/vim-sneak'
 Plug 'vim-airline/vim-airline'
 
 "" git
@@ -81,7 +80,13 @@ Plug 'rhysd/devdocs.vim'
 Plug 'altercation/vim-colors-solarized'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'jonathanfilip/vim-lucius'
+Plug 'hzchirs/vim-material'
+Plug 'YorickPeterse/happy_hacking.vim'
+Plug 'ajmwagar/vim-deus'
+Plug 'colepeters/spacemacs-theme.vim'
+Plug 'liuchengxu/space-vim-dark'
 Plug 'trevordmiller/nova-vim'
+Plug 'christophermca/meta5'
 Plug 'MaxSt/FlatColor'
 Plug 'dracula/vim'
 
@@ -90,26 +95,30 @@ call plug#end()
 
 " end plugins
 
-" Required:
-" filetype plugin indent on
-" syntax on
-
 " Configuration settings
 
 "" mappings
 let mapleader = "\<Space>"
 noremap <Leader>w :w<CR>
 noremap <Leader>q :q<CR>
-noremap <Leader>f :FZF<CR>
+noremap <Leader>f :Files<CR>
+noremap <Leader>s :Ag<CR>
 noremap <Leader>r :Buffers<CR>
 noremap <Leader><Leader> :e ~/repos/configs/nvim/init.vim<CR>
 noremap <Leader>g :Gstatus<CR>
 
 "" colors
 set background=dark
-colorscheme solarized
+set termguicolors
+colorscheme meta5
+" colorscheme solarized
 " colorscheme flatcolor
 " colorscheme dracula
+" colorscheme vim-material
+" colorscheme deus
+" colorscheme spacemacs-theme
+" colorscheme space-vim-dark
+" colorscheme happey_hacking
 
 "" defaults
 set encoding=utf-8
@@ -170,6 +179,9 @@ if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 endif
 
+""" trim whitespace on save
+autocmd BufWritePre * %s/\s\+$//e
+
 "" javascript
 let g:jsx_ext_required = 0
 
@@ -210,7 +222,7 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-n>"
 let g:UltiSnipsJumpBackwardTrigger="<c-b>"
 let g:UltiSnipsEditSplit="horizontal"
-let g:UltiSnipsSnippetsDir=$HOME . '/.config/nvim/UltiSnips'
+let g:UltiSnipsSnippetsDir=$HOME . '/repos/configs/nvim/UltiSnips'
 let g:UltiSnipsEnableSnipMate = 0
 
 " au FileType javascript :UltiSnipsAddFiletypes javascript
@@ -248,11 +260,13 @@ let g:airline_powerline_fonts=1
 let g:airline_theme='solarized'
 set laststatus=2
 
-""" vim-sneak
-let g:sneak#s_next = 1
-nmap f <Plug>Sneak_f
-nmap F <Plug>Sneak_F
-xmap f <Plug>Sneak_f
-xmap F <Plug>Sneak_F
-omap f <Plug>Sneak_f
-omap F <Plug>Sneak_F
+""" fzf
+let g:fzf_layout = { 'up': '28%' }
+function! s:fzf_statusline()
+  " Override statusline as you like
+  highlight fzf1 ctermfg=161 ctermbg=251
+  highlight fzf2 ctermfg=23 ctermbg=251
+  highlight fzf3 ctermfg=237 ctermbg=251
+  setlocal statusline=%#fzf1#\ >\ %#fzf2#fz%#fzf3#f
+endfunction
+autocmd! User FzfStatusLine call <SID>fzf_statusline()
